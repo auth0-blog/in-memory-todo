@@ -3,7 +3,8 @@ var logger        = require('morgan'),
     http          = require('http'),
     express       = require('express'),
     errorhandler  = require('errorhandler'),
-    routes        = require('./routes')
+    routes        = require('./routes'),
+    cors          = require('cors'),
     bodyParser    = require('body-parser');
 
 var app = express();
@@ -11,6 +12,7 @@ var app = express();
 // Parsers
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use(function(err, req, res, next) {
   if (err.name === 'StatusError') {
