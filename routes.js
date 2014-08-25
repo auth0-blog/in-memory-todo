@@ -36,22 +36,22 @@ exports.userTodo = function(app) {
   app.use('/api/todos', jwtCheck);
 
   app.get('/api/todos', function(req, res) {
-    res.send(200, db.Users.get(req.user.user_id).getAll());
+    res.send(200, db.Users.get(req.user.sub).getAll());
   });
 
   app.get('/api/todos/:id', function(req, res) {
-    res.send(200, db.Users.get(req.user.user_id).get(req.params.id));
+    res.send(200, db.Users.get(req.user.sub).get(req.params.id));
   });
 
   app.put('/api/todos/:id', function(req, res) {
-    res.send(200, db.Users.get(req.user.user_id).update(req.params.id, req.body));
+    res.send(200, db.Users.get(req.user.sub).update(req.params.id, req.body));
   });
 
   app.post('/api/todos', function(req, res) {
-    res.send(201, db.Users.get(req.user.user_id).add(req.body));
+    res.send(201, db.Users.get(req.user.sub).add(req.body));
   });
 
   app.delete('/api/todos/:id', function(req, res) {
-    res.send(200, db.Users.get(req.user.user_id).remove(req.params.id));
+    res.send(200, db.Users.get(req.user.sub).remove(req.params.id));
   });
 }
