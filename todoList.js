@@ -15,7 +15,7 @@ TodoList.prototype.add = function(elem) {
   }
 
   var newElem = _.pick(elem, 'name', 'description');
-  newElem.id = this.getLastId();
+  newElem.id = this.getLastId() + 1;
 
   this.list.push(newElem);
   return newElem;
