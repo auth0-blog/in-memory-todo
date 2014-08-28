@@ -8,6 +8,11 @@ This service is deployed in Heroku and saves the TODOs in memory, so once the dy
 
 It's deployed on [http://auth0-todo-test-api.herokuapp.com/](http://auth0-todo-test-api.herokuapp.com/)
 
+The Authenticated API uses `samples.auth0.com` tenant information.
+
+* Domain: samples.auth0.com
+* clientId: BUIJSW9x60sIHBw8Kd9EmCbj8eDIFxDC
+
 ## Available APIs
 
 ### Open API
