@@ -6,7 +6,7 @@ This is a NodeJS full API that you can use to test with your SPAs or Mobile apps
 
 This service is deployed in Heroku and saves the TODOs in memory, so once the dyno dies, all the todos are removed.
 
-It's deployed on [http://auth0-test-todo-api.herokuapp.com/api/todos](http://auth0-test-todo-api.herokuapp.com/api/todos)
+It's deployed on [http://auth0-test-todo-api.herokuapp.com/api/open/todos](http://auth0-test-todo-api.herokuapp.com/api/open/todos)
 
 The Authenticated API uses `samples.auth0.com` tenant information.
 
